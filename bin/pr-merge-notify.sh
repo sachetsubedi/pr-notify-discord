@@ -53,7 +53,7 @@ build_payload() {
         avatar_url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
         embeds: [
           ({
-            title: ("✅ PR #\($pr.number) merged: \($pr.title)" | trunc(256)),
+            title: ("PR #\($pr.number) merged: \($pr.title)" | trunc(256)),
             url: $pr.html_url,
             color: 9000933,
             author: {
@@ -63,11 +63,11 @@ build_payload() {
             },
             thumbnail: { url: $pr.user.avatar_url },
             fields: [
-              { name: "Repository", value: "[\($repo)](https://github.com/\($repo))", inline: true },
-              { name: "Branch", value: "`\($pr.head.ref) → \($pr.base.ref)`", inline: true },
+              { name: "Repository", value: "[\($repo)](https://github.com/\($repo))", inline: false },
+              { name: "Branch", value: "`\($pr.head.ref) → \($pr.base.ref)`", inline: false },
               { name: "Changes",
                 value: "+\($pr.additions) −\($pr.deletions) · \($pr.changed_files) \(if $pr.changed_files == 1 then "file" else "files" end) · \($pr.commits) \(if $pr.commits == 1 then "commit" else "commits" end)",
-                inline: true }
+                inline: false }
             ],
             footer: {
               text: "Merged by \($pr.merged_by.login // "unknown")",
