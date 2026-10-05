@@ -1,0 +1,7 @@
+[Unit]
+Description=Notify Discord of merged PRs
+
+[Service]
+Type=oneshot
+EnvironmentFile=%h/.local/share/pr-merge-notify/config/pr-merge-notify.env
+ExecStart=%h/.local/share/pr-merge-notify/bin/pr-merge-notify.sh

@@ -1,0 +1,11 @@
+[Unit]
+Description=Check for merged PRs every minute
+# Note: install.sh regenerates the installed copy from POLL_INTERVAL in
+# config/pr-merge-notify.env. This file is just the default.
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1min
+
+[Install]
+WantedBy=timers.target
