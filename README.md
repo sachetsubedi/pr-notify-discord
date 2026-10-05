@@ -52,8 +52,8 @@ gh auth status
 ## Install
 
 ```bash
-git clone <your-repo-url> pr-merge-notify
-cd pr-merge-notify
+git clone https://github.com/sachetsubedi/pr-notify-discord.git
+cd pr-notify-discord
 ./install.sh
 ```
 
