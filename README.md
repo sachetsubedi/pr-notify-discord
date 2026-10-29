@@ -211,7 +211,7 @@ After install:
   50 merges in one 1-min window will spill into the next run(s).
 - Discord embed description is truncated to 300 chars, title to 256 chars.
 - `state/seen` keeps the last 500 entries.
-- Keep `pr-merge-notify.env` and your webhook URL private.
+- Keep `pr-merge-notify.env` and your webhook URL private.   
 
 ## License
 
